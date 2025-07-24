@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Frame</title>
+   <meta charset="UTF-8">
+</head>
+<body text="black" bgcolor="#DB7093" marginheight="40" topmargin="40">
+
+<center>
+   <h1></h1>
+   <br>
+   <font color="black"><h1>DATOS DEL CLIENTE</h1></font>
+   <br>
+
+   <form action="mmicj913@gmail.com.html" method="post">
+      <br><br>
+      <font size="4">
+
+      1.CLIENTE
+      <br><br>
+      <input type="text" name="nombre" size="40" required>
+      <br><br>
+
+      ELIGE TU PEDIDO
+      <br><br>
+      <input type="checkbox" name="tipo_ham" value="hamburguesa sencilla"> SENCILLA A $50<br>
+      <input type="checkbox" name="tipo_ham" value="hamburguesa especial"> ESPECIAL A $80<br>
+      <input type="checkbox" name="tipo_ham" value="hot dog"> HOT DOGS A $65<br>
+      <input type="checkbox" name="tipo_ham" value="bebida"> BEBIDA A $35<br>
+      <input type="checkbox" name="tipo_ham" value="alitas"> ALITAS A $60<br>
+      <br><br>
+
+      ADEREZOS Y SALSAS
+      <br><br>
+      <input type="checkbox" name="complemento" value="BBQ"> BBQ<br>
+      <input type="checkbox" name="complemento" value="Mango Habanero"> MANGO HABANERO<br>
+      <input type="checkbox" name="complemento" value="Ranch"> RANCH<br>
+      <input type="checkbox" name="complemento" value="Agridulce"> AGRIDULCE<br>
+      <input type="checkbox" name="complemento" value="Bufalo"> BÚFALO<br>
+      <input type="checkbox" name="complemento" value="Queso Extra"> QUESO EXTRA $10<br>
+      <br><br>
+
+      4. TIPO DE PAGO
+      <br><br>
+      <select name="tipo_p" required>
+         <option value="con_tarjeta">TARJETA</option>
+         <option value="en_efectivo">EFECTIVO</option>
+         <option value="transferencia">TRANSFERENCIA</option>
+      </select>
+      <br><br>
+
+      <!-- Botón para abrir nueva página -->
+      <button type="button" onclick="abrirVentana()">¿CÓMO FUE ATENDIDO?</button>
+      <br><br>
+
+      <input type="reset" value="BORRAR">
+      </font>
+   </form>
+</center>
+
+<script>
+   function abrirVentana() {
+      window.open("clientefor.html", "_blank");
+   }
+</script>
+
+</body>
+</html>

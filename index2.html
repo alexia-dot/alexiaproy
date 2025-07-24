@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MarciBurgueritos - Hamburguesas & Hot Dogs</title>
+<style>
+  /* Paleta principal */
+  :root {
+    --rosa: #db7093;
+    --rosa-claro: #ffc0cb;
+    --marron: #6b3e26;
+    --naranja: #ff7f50;
+    --gris-claro: #f5efeb;
+    --blanco: #fff;
+    --negro: #333;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gris-claro);
+    color: var(--marron);
+  }
+
+  header {
+    background: var(--rosa);
+    color: var(--blanco);
+    padding: 1rem 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  header img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--blanco);
+  }
+
+  nav {
+    background: var(--marron);
+    color: var(--blanco);
+  }
+  nav ul {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+  }
+  nav li {
+    padding: 0.5rem 1rem;
+    background: var(--naranja);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  nav li a {
+    color: var(--blanco);
+    text-decoration: none;
+  }
+  nav li:hover {
+    background: var(--rosa);
+  }
+  nav li a:hover {
+    text-decoration: underline;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  /* Contenedores para hamburguesas especiales */
+  .especiales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .especial {
+    background: var(--blanco);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    color: var(--marron);
+    padding: 1rem;
+  }
+  .especial img {
+    width: 180px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  caption {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--naranja);
+  }
+  th, td {
+    border: 1px solid var(--marron);
+    padding: 0.3rem 0.5rem;
+  }
+  th {
+    background: var(--rosa-claro);
+  }
+
+  /* Formulario */
+  form {
+    background: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    color: var(--marron);
+  }
+  form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--naranja);
+  }
+  label {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    font-weight: 600;
+  }
+  input[type="text"], select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--marron);
+    font-size: 1rem;
+  }
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+    vertical-align: middle;
+  }
+  .checkbox-group {
+    margin-bottom: 1rem;
+  }
+  button, input[type="reset"] {
+    background: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0.5rem 0.2rem;
+    transition: background-color 0.3s ease;
+  }
+  button:hover, input[type="reset"]:hover {
+    background: var(--rosa);
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .especiales {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="img/LOGO.jpg" alt="Logo de MarciBurgueritos" />
+  <h1>MARCIBURGUERITOS</h1>
+</header>
+
+<nav>
+  <ul>
+
+    <li><a href="hotdogs.html">Hot Dogs</a></li>
+    <li><a href="bebidas.html">Bebidas</a></li>
+    <li><a href="alitas.html">Alitas</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="http://localhost/ALEXIA/ordenar.php">ORDENA</a></li>
+
+  </ul>
+</nav>
+
+<main>
+
+  <!-- Hamburguesas Sencillas (placeholder) -->
+  <section id="sencillas">
+    <!-- Hamburguesas Sencillas -->
+<section id="sencillas">
+  <h2>Hamburguesas Sencillas</h2>
+  <div class="especiales">
+    <article class="especial">
+      <img src="img/1.jpg" alt="Hamburguesa Clásica" style="width:150px; height:200px; border-radius:10px; object-fit: cover;" />
+      <table>
+        <caption>CLÁSICA</caption>
+        <thead>
+          <tr><th>INGREDIENTES</th><th>PRECIO</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              CARNE<br />
+              LECHUGA<br />
+              QUESO AMARILLO<br />
+              JITOMATE<br />
+              CEBOLLA<br />
+              PAN
+            </td>
+            <td>$50</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="especial">
+      <img src="img/2.jpg" alt="Hamburguesa Hawaiana" style="width:150px; height:200px; border-radius:10px; object-fit: cover;" />
+      <table>
+        <caption>HAWAIANA</caption>
+        <thead>
+          <tr><th>INGREDIENTES</th><th>PRECIO</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              CARNE<br />
+              PIÑA<br />
+              LECHUGA<br />
+              QUESO AMARILLO<br />
+              JITOMATE<br />
+              CEBOLLA<br />
+              PAN
+            </td>
+            <td>$55</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="especial">
+      <img src="img/3.jpg" alt="Hamburguesa Salchicha" style="width:180px; height:200px; border-radius:10px; object-fit: cover;" />
+      <table>
+        <caption>SALCHICHA</caption>
+        <thead>
+          <tr><th>INGREDIENTES</th><th>PRECIO</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              CARNE<br />
+              SALCHICHA<br />
+              LECHUGA<br />
+              QUESO AMARILLO<br />
+              JITOMATE<br />
+              CEBOLLA<br />
+              PAN
+            </td>
+            <td>$55</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="especial">
+      <img src="img/3.jpg" alt="Hamburguesa Tocino" style="width:180px; height:200px; border-radius:10px; object-fit: cover;" />
+      <table>
+        <caption>TOCINO</caption>
+        <thead>
+          <tr><th>INGREDIENTES</th><th>PRECIO</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              CARNE<br />
+              TOCINO<br />
+              LECHUGA<br />
+              QUESO AMARILLO<br />
+              JITOMATE<br />
+              CEBOLLA<br />
+              PAN
+            </td>
+            <td>$55</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Hamburguesas Especiales -->
+  <section id="especiales">
+    <h2>Hamburguesas Especiales</h2>
+    <div class="especiales">
+
+      <article class="especial">
+        <img src="img/5.jpg" alt="Hamburguesa Jumbo" />
+        <table>
+          <caption>JUMBO</caption>
+          <thead>
+            <tr>
+              <th>INGREDIENTES</th>
+              <th>PRECIO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                DOBLE CARNE<br />
+                LECHUGA<br />
+                QUESO AMARILLO<br />
+                QUESO OAXACA<br />
+                JITOMATE<br />
+                CEBOLLA<br />
+                PEPINILLOS<br />
+                RAJAS<br />
+                PAN
+              </td>
+              <td>$80</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="especial">
+        <img src="img/6.jpg" alt="Hamburguesa Jumbo con Papas" />
+        <table>
+          <caption>JUMBO CON PAPAS</caption>
+          <thead>
+            <tr>
+              <th>INGREDIENTES</th>
+              <th>PRECIO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                CARNE<br />
+                TOCINO<br />
+                SALCHICHA<br />
+                LECHUGA<br />
+                QUESO AMARILLO<br />
+                JITOMATE<br />
+                CEBOLLA<br />
+                PAPAS<br />
+                PAN
+              </td>
+              <td>$90</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="especial">
+        <img src="img/7.jpg" alt="Hamburguesa Exxxtra Jumbo" />
+        <table>
+          <caption>EXXXTRA JUMBO</caption>
+          <thead>
+            <tr>
+              <th>INGREDIENTES</th>
+              <th>PRECIO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                3 CARNES<br />
+                TOCINO<br />
+                BBQ<br />
+                LECHUGA<br />
+                QUESO AMARILLO<br />
+                JITOMATE<br />
+                CEBOLLA<br />
+                PAN
+              </td>
+              <td>$100</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="especial">
+        <img src="img/8.jpg" alt="Hamburguesa Jumbo con Aros de Cebolla" />
+        <table>
+          <caption>JUMBO CON AROS DE CEBOLLA</caption>
+          <thead>
+            <tr>
+              <th>INGREDIENTES</th>
+              <th>PRECIO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                CARNE<br />
+                TOCINO<br />
+                LECHUGA<br />
+                QUESO AMARILLO<br />
+                JITOMATE<br />
+                CEBOLLA<br />
+                AROS DE CEBOLLA<br />
+                PAN
+              </td>
+              <td>$100</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+  </section>
+
+  
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Video -->
+  <section id="video">
+
+ 
+    <h2>Video</h2>
+    <video controls src ="MUSICA VIDEOS/videoplayback.mp4"></video>
+    
+  </section>
+
+
+</main>
+
+<script>
+  function abrirVentana() {
+    window.open("clientefor.html", "_blank");
+  }
+</script>
+
+</body>
+</html>

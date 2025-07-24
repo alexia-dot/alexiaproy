@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alitas - MarciBurgueritos</title>
+  <style>
+    :root {
+      --rosa: #db7093;
+      --rosa-claro: #ffc0cb;
+      --marron: #6b3e26;
+      --naranja: #ff7f50;
+      --gris-claro: #f5efeb;
+      --blanco: #fff;
+      --negro: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--gris-claro);
+      color: var(--marron);
+      padding: 1rem;
+      position: relative;
+    }
+
+    /* Botón regresar */
+    .btn-regresar {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: var(--naranja);
+      color: var(--blanco);
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .btn-regresar:hover {
+      background: var(--rosa);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--rosa);
+      font-style: italic;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .alitas-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 3rem; /* para no tapar contenido con botón */
+    }
+
+    .alita-card {
+      background: var(--blanco);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(107, 62, 38, 0.2);
+      width: 250px;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .alita-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(107, 62, 38, 0.35);
+    }
+
+    .alita-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 4px solid var(--naranja);
+    }
+
+    table {
+      width: 90%;
+      margin: 1rem auto 1.5rem;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    caption {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--naranja);
+    }
+
+    th, td {
+      border: 1px solid var(--marron);
+      padding: 0.4rem 0.8rem;
+    }
+
+    th {
+      background: var(--rosa-claro);
+    }
+
+    td:nth-child(2) {
+      white-space: nowrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .alitas-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index2.html" class="btn-regresar">← Regresar</a>
+
+  <h1>ALITAS</h1>
+
+  <div class="alitas-container">
+    <article class="alita-card">
+      <img src="img/17.jpg" alt="Alitas BBQ" />
+      <table>
+        <caption>BBQ</caption>
+        <thead>
+          <tr>
+            <th>TAMAÑOS</th>
+            <th>PRECIO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CHICAS<br />MEDIANAS<br />GRANDES</td>
+            <td>$50<br />$75<br />$100</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="alita-card">
+      <img src="img/18.jpg" alt="Alitas Al Carbón" />
+      <table>
+        <caption>AL CARBÓN</caption>
+        <thead>
+          <tr>
+            <th>TAMAÑOS</th>
+            <th>PRECIO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CHICAS<br />MEDIANAS<br />GRANDES</td>
+            <td>$50<br />$75<br />$100</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="alita-card">
+      <img src="img/19.jpg" alt="Alitas Fritas" />
+      <table>
+        <caption>FRITAS</caption>
+        <thead>
+          <tr>
+            <th>TAMAÑOS</th>
+            <th>PRECIO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CHICAS<br />MEDIANAS<br />GRANDES</td>
+            <td>$50<br />$75<br />$100</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </div>
+
+</body>
+</html>
